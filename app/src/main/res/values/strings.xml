@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">IntentsProj</string>
+    <string name="number1">Number 1</string>
+    <string name="number2">Number 2</string>
+    <string name="ok">Ok</string>
+    <string name="plus">+</string>
+    <string name="min">-</string>
+    <string name="multify">*</string>
+    <string name="devide">%</string>
+    <string name="title">Tutorial 3</string>
+    <string name="editorname">K.H.T.N Dewangi</string>
+</resources>
