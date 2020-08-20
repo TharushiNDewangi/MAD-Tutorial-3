@@ -57,13 +57,27 @@ public class MainActivity extends AppCompatActivity {
         String number2 = num2.getText().toString();
 
         //Toast part simple way
-        Toast.makeText(getApplicationContext(), "wellcome you", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "wellcome you", Toast.LENGTH_SHORT).show();
+
 
         //call second activity
         Intent intent = new Intent(MainActivity.this, SecondActivity.class);
         //
         intent.putExtra("input1", number1);
         intent.putExtra("input2", number2);
+
+        //Creating the LayoutInflater instance
+        LayoutInflater li = getLayoutInflater();
+        //Getting the View object as defined in the customtoast.xml file
+        View layout = li.inflate(R.layout.custom_toast, (ViewGroup)
+                findViewById(R.id.custom_toast_layout));
+
+        //Creating the Toast object
+        Toast toast = new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setView(layout);//setting the view of custom toast layout
+        toast.show();
         startActivity(intent);
 
     }
